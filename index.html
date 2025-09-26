@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styele.css" />
+  <link rel="icon" type="image/png"
+    href="https://sdmntpreastus2.oaiusercontent.com/files/00000000-2ed8-61f6-939e-c6987828284f/raw?se=2025-09-26T11%3A59%3A28Z&sp=r&sv=2024-08-04&sr=b&scid=7b54c85e-1621-5205-b55f-ab1b63dc8c8c&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-25T21%3A13%3A59Z&ske=2025-09-26T21%3A13%3A59Z&sks=b&skv=2024-08-04&sig=lBsqlJZrAFiThntaOPl2/n0R5/9CyV9Yc8D4SG5TLLg%3D" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="school-info">
+        <div class="school-badge">204</div>
+        <div class="school-details">
+          <h1 data-translate="schoolTitle">204 MAKTAB 10 E</h1>
+          <p data-translate="studentList">Bolalar Ro'yxati</p>
+        </div>
+      </div>
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="uz">O'zbek</option>
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div class="search-section">
+      <div class="search-controls">
+        <input type="text" id="searchInput" class="search-input" data-placeholder="searchPlaceholder" />
+        <select id="sortSelect" class="search-select">
+          <option value="name" data-translate="sortName">Ism bo'yicha</option>
+          <option value="id" data-translate="sortId">ID bo'yicha</option>
+          <option value="birth" data-translate="sortBirth">
+            Tug'ilgan yil bo'yicha
+          </option>
+        </select>
+        <button class="btn btn-primary" onclick="searchStudents()" data-translate="btnSearch">
+          Qidirish
+        </button>
+        <button class="btn btn-secondary" onclick="resetSearch()" data-translate="btnClear">
+          Tozalash
+        </button>
+      </div>
+    </div>
+
+    <div class="students-grid" id="studentsGrid"></div>
+  </div>
+
+  <div id="studentModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 data-translate="modalTitle">O'quvchi ma'lumotlari</h2>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Mars IT Academy – student
+      <a href="https://t.me/akromvich_m777" target="_blank">@akromvich_m777</a>
+    </p>
+  </footer>
+
+  <script src="./mean.js"></script>
+</body>
+</html>
